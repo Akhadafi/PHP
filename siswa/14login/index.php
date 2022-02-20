@@ -52,7 +52,7 @@ require 'functions.php';
 					<a href="ubah.php?nisn=<?= $row["nisn"]; ?>">ubah</a> |
 					<a href="hapus.php?nisn=<?= $row["nisn"]; ?>" onclick="return confirm('yakin?');">hapus</a>
 				</td>
-				<td><img src="../asset/img/proile/<?= $row["gambar"]; ?>" width="50"></td>
+				<td><img src="../asset/img/profile/<?= $row["gambar"]; ?>" width="50"></td>
 				<td><?= $row["nisn"]; ?></td>
 				<td><?= $row["nama"]; ?></td>
 				<td><?= $row["agama"]; ?></td>

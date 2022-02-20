@@ -80,7 +80,7 @@ function upload()
 	$namaFileBaru .= '.';
 	$namaFileBaru .= $ekstensiGambar;
 
-	move_uploaded_file($tmpName, '../asset/img/proile/' . $namaFileBaru);
+	move_uploaded_file($tmpName, '../asset/img/profile/' . $namaFileBaru);
 
 	return $namaFileBaru;
 }
@@ -150,7 +150,11 @@ function registrasi($data)
 	$username = strtolower(stripslashes($data["username"]));
 	$password = mysqli_real_escape_string($conn, $data["password"]);
 	$password2 = mysqli_real_escape_string($conn, $data["password2"]);
-	$gambar = mysqli_real_escape_string($conn, $data["gambar"]);
+	// upload gambar
+	$gambar = upload();
+	if (!$gambar) {
+		return false;
+	}
 
 	// cek username sudah ada atau belum
 	$result = mysqli_query($conn, "SELECT username FROM user WHERE username = '$username'");
