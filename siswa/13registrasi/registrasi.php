@@ -44,6 +44,10 @@ if (isset($_POST["register"])) {
         <label for="password2">konfirmasi password :</label>
         <input type="password" name="password2" id="password2">
       </li>
+      <l1>
+        <label for="gambar">Gambar :</label>
+        <input type="file" name="gambar" id="gambar">
+      </l1>
       <li>
         <button type="submit" name="register">Register!</button>
       </li>
