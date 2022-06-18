@@ -1,1 +1,1 @@
-sasas
+php_check_syntax()
